@@ -10,20 +10,21 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private long customerId;
     private String firstName;
     private String lastName;
     private String email;
     private String processorId;
     private String key;
     private String salt;
+    private boolean priv;
 
-    public long getId() {
-        return id;
+    public long getCustomerId() {
+        return customerId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
     }
 
     public String getFirstName() {
@@ -72,5 +73,13 @@ public class Customer {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public boolean isPriv() {
+        return priv;
+    }
+
+    public void setPriv(boolean priv) {
+        this.priv = priv;
     }
 }

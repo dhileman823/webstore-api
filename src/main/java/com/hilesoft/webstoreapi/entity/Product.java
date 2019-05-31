@@ -8,7 +8,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private long id;
+    private long productId;
     private String name;
     private String description;
     private BigDecimal cost;
@@ -17,12 +17,12 @@ public class Product {
     @JoinColumn(name = "product_image_id")
     private ProductImage productImage;
 
-    public long getId() {
-        return id;
+    public long getProductId() {
+        return productId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setProductId(long productId) {
+        this.productId = productId;
     }
 
     public String getName() {
